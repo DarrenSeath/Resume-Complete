@@ -1,0 +1,275 @@
+html,
+body {
+    font-family: Helvetica;
+    font-size: 22px;
+    margin:0;
+}
+
+
+
+img {
+
+    object-fit: contain;
+    border-style: solid;
+    margin-top: 12%;
+    margin-left: 15%;
+    max-width: 65%;
+    max-height: 65%;
+    margin-bottom: 33px;
+    width: auto;
+    height: auto;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+    grid-template-areas:
+        "a h h h h"
+        "a c c c c"
+        "a c c c c"
+        "a c c c c"
+        "a f f f f"              
+}
+
+
+
+h1 {
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-top: 0px;
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    text-indent: 25px;
+}
+
+h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 48px;
+    font-weight: bolder;
+    text-indent: 34px;
+}
+
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: black;
+}
+
+#indented {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    text-indent: 25px;
+}
+
+a:hover {
+    background-color: honeydew;
+}
+
+
+
+header {
+    grid-area: h;
+    background-color: #ffffff;
+}
+
+section#a {
+    grid-area: a;
+    background-color: #0f8bff;
+}
+
+section#b {
+    grid-area: b;
+    background-color: #ffffff;
+}
+
+section#c {
+    grid-area: c;
+    background-color: #ffffff;
+}
+
+footer {
+    grid-area: f;
+    background-color: #ffffff;
+}
+
+
+
+.change p {
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+}
+
+#header1 {
+    margin-bottom: 10px;
+    font-size: 170px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+
+footer {
+    text-align: left;
+}
+
+.Education {
+    font-size: 34px;
+    list-style-type: none;
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+}
+
+hr {
+    border: 2px solid black;
+}
+
+#desc {
+    text-emphasis: none;
+    text-decoration: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+#type2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+}
+
+#type {
+    margin: 20px;
+    font-size: 28px;
+}
+
+.hobbies {
+    display: grid;
+    grid-template: repeat(4, 155px) / repeat(1, 155px);
+    text-indent: 80px;
+    
+}
+
+
+.word {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+.paragraph {
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#header {
+    font-size: 28px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-indent: 34px;
+}
+
+.newparagraph {
+    font-size: 26px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+@media screen and (max-width:650px) {
+    html,
+
+   
+    p {
+      color: black;
+    }
+
+
+    h2{
+        font-size: 1em;
+        color: white;
+    }
+
+    #type2{
+        font-size: 1em;
+
+    }
+
+    h3{
+        font-size: .6em;
+    }
+
+    #indented{
+        font-size: .5em;
+    }
+
+    #header1{
+        font-size: 3em;
+    }
+    
+    h4{
+        font-size: 1em;
+    }
+
+    #Hobby {
+        font-size: 45%;
+        text-indent: 23%;
+    }
+
+    .Education{
+        font-size: .8em;
+    }
+
+    .newparagraph{
+        font-size: 0.8em;
+    }
+
+    #header{
+        font-size: .8em;
+    }
+    
+
+    .hobbies {
+        display: grid;
+        grid-template: repeat(4, 80px) / repeat(1, 155px);
+        text-indent: 60px;
+        
+    }
+    
+    .container{   
+        display: grid;
+        grid-template: repeat(3, 10em) / repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(1fr));
+        grid-template-areas:
+            "a h h h h"
+            "a c c c c"
+            "a c c c c"
+            "a c c c c"
+            "a f f f f"              
+    }
+
+
+}
