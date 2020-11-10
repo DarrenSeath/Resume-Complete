@@ -168,7 +168,7 @@ hr {
 .hobbies {
     display: grid;
     grid-template: repeat(4, 155px) / repeat(1, 155px);
-    text-indent: 80px;
+    text-indent: 25%px;
     
 }
 
