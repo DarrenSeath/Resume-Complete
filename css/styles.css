@@ -6,9 +6,47 @@ body {
 }
 
 
+@keyframes slideinfromleft{
+    0%{
+        transform:translateX(-100%)
+    }
+     100%{transform:translateX(0%)
+}
+}
+
+
+
+#Hobby{
+font-size: 400%;
+text-indent: 25%;
+position: relative;
+display: inline-block;
+-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#Hobby::after {
+content: "";
+position: absolute;
+z-index: -1;
+top: 0;
+left: 0;
+opacity: 0;
+-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#Hobby:hover {
+-webkit-transform: scale(1.25, 1.25);
+transform: scale(1.25, 1.25);
+}
+
+#Hobby:hover::after {
+  opacity: 1;
+}
 
 img {
-
+    animation:slideinfromleft 1s ease-in;
     object-fit: contain;
     border-style: solid;
     margin-top: 12%;
@@ -76,8 +114,8 @@ a:visited {
 
 #indented {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 22px;
-    text-indent: 25px;
+    font-size: 1em;
+    text-indent: 1em;
 }
 
 a:hover {
@@ -114,7 +152,7 @@ footer {
 
 
 .change p {
-    font-size: 16px;
+    font-size: 1em;
 }
 
 header {
@@ -122,8 +160,8 @@ header {
 }
 
 #header1 {
-    margin-bottom: 10px;
-    font-size: 170px;
+    margin-bottom: 0.5em;
+    font-size: 7em;
     font-style: italic;
     font-family: cursive;
 }
@@ -134,7 +172,7 @@ footer {
 }
 
 .Education {
-    font-size: 34px;
+    font-size: 1.2em;
     list-style-type: none;
     text-align: left;
 }
@@ -145,58 +183,60 @@ li {
 }
 
 hr {
-    border: 2px solid black;
+    border:  solid black;
 }
 
 #desc {
     text-emphasis: none;
     text-decoration: none;
     text-align: left;
-    font-size: 18px;
+    font-size: .8em;
 }
 
 #type2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 28px;
+    font-size: 1em;
 }
 
 #type {
-    margin: 20px;
-    font-size: 28px;
+    margin: 1.2em;
+    font-size: 1em;
 }
 
 .hobbies {
     display: grid;
     grid-template: repeat(4, 155px) / repeat(1, 155px);
-    text-indent: 15%;
+    text-indent: 1em;
     
 }
 
 
 .word {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.3em;
 }
 
 
 .paragraph {
-    font-size: 18px;
+    font-size: 1em;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #header {
-    font-size: 28px;
+    font-size: 1.5em;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-indent: 34px;
+    text-indent: 1em;
 }
 
 .newparagraph {
-    font-size: 26px;
+    font-size: 1em;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
 
 
 @media screen and (max-width:650px) {
@@ -218,12 +258,17 @@ hr {
 
     }
 
+    h4{
+        font-size: 1.5em;
+    }
+
     h3{
-        font-size: .6em;
+        font-size: 1em;
     }
 
     #indented{
-        font-size: .5em;
+        text-indent: 1.3em;
+        font-size: .7em;
     }
 
     #header1{
@@ -235,8 +280,9 @@ hr {
     }
 
     #Hobby {
+        
         font-size: 45%;
-        text-indent: 18%;
+        text-indent: 23%;
     }
 
     .Education{
@@ -254,8 +300,8 @@ hr {
 
     .hobbies {
         display: grid;
-        grid-template: repeat(4, 80px) / repeat(1, 155px);
-        text-indent: 60px;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        text-indent: 5em;
         
     }
     
@@ -264,12 +310,16 @@ hr {
         grid-template: repeat(3, 10em) / repeat(5, 1fr);
         grid-template-columns: repeat(auto-fit, minmax(1fr));
         grid-template-areas:
-            "a h h h h"
-            "a c c c c"
-            "a c c c c"
-            "a c c c c"
-            "a f f f f"              
+            "h h h h h"
+            "c c c c c"
+            "c c c c c"
+            "c c c c c"
+            "f f f f f"
+            "a a a a a"
     }
 
+    #Hobby{
+        font-size: 4em;
+    }
 
 }
